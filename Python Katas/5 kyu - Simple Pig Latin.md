@@ -39,5 +39,5 @@ def pig_it(text):
 # you can use isalpha() to check if the word contains only a-z characters.
 # Check Python String Methods for more functions and info.
 def pig_it(text):
-    return ' '.join( [word[1:] + word[0] + 'ay' if word.isalpha() else word for word in text.split()])
+    return ' '.join([word[1:] + word[0] + 'ay' if word.isalpha() else word for word in text.split()])
 ```
