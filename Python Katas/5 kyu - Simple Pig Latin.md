@@ -30,5 +30,13 @@ def pig_it(text):
         latin.append(word)
         
     # Return the pigified string by joining the words with a space inbetween each of them.
-    return " ".join(latin)
+    return ' '.join(latin)
+```
+
+## My Solution #2 - One Liner - Split and Splice + List Comprehension
+```python
+def pig_it(text):
+    # Instead of manually checking for symbols to ignore, you can use isalpha() to check if the word contains only a-z characters.
+    # Check Python String Methods for more functions and info.
+    return ' '.join( [word[1:] + word[0] + 'ay' if word.isalpha() else word for word in text.split()])
 ```
