@@ -44,3 +44,31 @@ def fibonacci(n):
     
     return result
 ```
+
+## My Solution #2 - 'Private' Wrapped Memoization
+This solution has the advantage of being easier to reuse.
+```python
+def memoize(func):
+    # Memoized function wrapper.
+    mem = {}
+
+    def wrapped(n):
+        # Try to retrieve the result from mem.
+        result = mem.get(n)
+
+        # If it's not there, calculate and add it to mem.
+        if result is None:
+            result = mem[n] = func(n)
+        return result
+
+    # Return the memoized wrapped function.
+    return wrapped
+
+# By decorating the original function with @memoize, it will now
+# use the mem cache defined in the memoize wrapper.
+@memoize
+def fibonacci(n):
+    if n in [0, 1]:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+```
