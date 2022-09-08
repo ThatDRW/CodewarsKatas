@@ -1,10 +1,31 @@
 # 4 kyu - Hamming Numbers
 ## Instructions
+A Hamming number is a positive integer of the form 2i3j5k, for some non-negative integers i, j, and k.
 
+Write a function that computes the nth smallest Hamming number.
+
+Specifically:
+    The first smallest Hamming number is 1 = 2^0 3^0 5^0
+    The second smallest Hamming number is 2 = 2^1 3^0 5^0
+    The third smallest Hamming number is 3 = 2^0 3^1 5^0
+    The fourth smallest Hamming number is 4 = 2^2 3^0 5^0
+    The fifth smallest Hamming number is 5 = 2^0 3^0 5^1
+
+The 20 smallest Hamming numbers are given in the Example test fixture.
+
+Your code should be able to compute the first 5 000 ( LC: 400, Clojure: 2 000, NASM, C, D, C++, Go and Rust: 13 282 ) Hamming numbers without timing out.
 
 ## Examples
-```
-
+```python
+test.expect(hamming(1) == 1, "hamming(1) should be 1");
+test.expect(hamming(2) == 2, "hamming(2) should be 2");
+test.expect(hamming(3) == 3, "hamming(3) should be 3");
+test.expect(hamming(4) == 4, "hamming(4) should be 4");
+test.expect(hamming(5) == 5, "hamming(5) should be 5");
+test.expect(hamming(6) == 6, "hamming(6) should be 6");
+test.expect(hamming(7) == 8, "hamming(7) should be 8");
+test.expect(hamming(8) == 9, "hamming(8) should be 9");
+test.expect(hamming(9) == 10, "hamming(9) should be 10");
 ```
 
 ## My Solution #1 - All passed - Timed Out
