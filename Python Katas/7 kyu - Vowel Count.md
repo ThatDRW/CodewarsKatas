@@ -26,3 +26,9 @@ def get_count(sentence):
         count += sentence.count(vowel)
     return count
 ```
+
+## My Solution #2 - One Liner
+```python
+def get_count(sentence):
+    return sum([sentence.count(vowel) for vowel in ['a','e','i','o','u']])
+```
