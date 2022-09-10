@@ -53,7 +53,7 @@ lacus,   ut   elementum  justo
 nulla et dolor.
 ```
 
-## My Solution #1 - 
+## My Solution #1 - Sequential Processing
 ```python
 def justify(text, width):
     words = text.split(' ')
@@ -125,4 +125,39 @@ def justify(text, width):
     for line in outlines: print(len(line), line)
     
     return ''.join(outlines)
+```
+
+## My Solution #2 - Recursive Approach
+```python
+def justify(text, width):
+    """Justify text to max width."""
+    # Use rfind to find the last word end index respecting max width.
+    length = text.rfind(' ', 0, width+1)
+
+    # Base Case: If no spaces found or this will become the last string.
+    if length == -1 or len(text) <= width: return text
+
+    # Pull the first line off the text.
+    line = text[:length]
+
+    # Count the total number of spaces in this line.
+    spaces = line.count(' ')
+
+    # If there is at least one space, we will justify this line.
+    if spaces != 0:
+        # All spaces will be replaced by expand-number of spaces.
+        expand = (width - length) // spaces + 1
+
+        # Using modulo, find the remainder of spaces that cant
+        # be divided equally amongst the others.
+        extra = (width - length) % spaces
+        
+        # Replace all spaces with their expanded version.
+        line = line.replace(' ', ' '*expand)
+
+        # Now replace the first extra-number of spaces, with an addidional one.
+        line = line.replace(' '*expand, ' '*(expand+1), extra)
+
+    # Return our justified line + a newline. Send the remaining text through.
+    return line + '\n' + justify(text[length+1:], width)
 ```
