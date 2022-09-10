@@ -21,3 +21,10 @@ def is_triangle(a, b, c):
         return True
     return False
 ```
+
+## my Solution #2 - Using Sorted and Cleaned Return
+```python
+def is_triangle(a, b, c):
+    a, b, c = sorted([a, b, c])
+    return a + b > c
+```
