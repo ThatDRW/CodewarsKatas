@@ -30,6 +30,7 @@ def increment_string(strng):
     if renlen:
         # Increment number and restore leading zeros.
         newnum = str(int(renum[0]) + 1).zfill(renlen)
+        # Remove old number from the string and append new.
         return strng.rstrip(renum[0]) + newnum
     else:
         # If there wasn't a number yet, return + '1'.
