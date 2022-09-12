@@ -36,3 +36,20 @@ def count_photos(road):
     
     return count
 ```
+
+# My Solution #2 - Single Pass
+```python
+def count_photos(road):
+    count, cams, lefts = 0, 0, 0
+    
+    for item in road:
+        if item == '>':
+            lefts += 1
+        elif item == '.':
+            cams += 1
+            count += lefts
+        elif item == '<':
+            count += cams
+            
+    return count
+```
