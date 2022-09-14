@@ -46,7 +46,7 @@ def decrypt(encrypted_text, n):
     
     # splitcat n times.
     for i in range(n):
-        encrypted_text = splitcat(encrypted_text, split)
+        encrypted_text = splitcat(encrypted_text)
     
     return encrypted_text
 
