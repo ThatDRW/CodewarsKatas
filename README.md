@@ -1,3 +1,3 @@
 # CodewarsKatas
-![https://www.codewars.com/users/ThatDRW/badges/large](Codewars Banner)
+![Codewars Banner Large](https://www.codewars.com/users/ThatDRW/badges/large)
 Solutions to Codewars Katas I've done.
