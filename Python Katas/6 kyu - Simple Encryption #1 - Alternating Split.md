@@ -29,7 +29,7 @@ def oddcat(s:str):
 
 def splitcat(s:str):
     # Un-oddcat the given string around index split.
-    length = len(encrypted_text)
+    length = len(s)
     split = int(length / 2)
     out = ''
     sevn = [x for x in s[:split]]
