@@ -74,7 +74,7 @@ Notice: changing some of the input data might not help you.
 ## My Solution #1 - 
 ```python
 def street_fighter_selection(fighters, initial_position, moves):
-    posx, posy = initial_position
+    posy, posx = initial_position
     selected = []
     
     for move in moves:
