@@ -69,12 +69,6 @@ def swap(a, x, y):
     return a
 
 def nth_perm(n,d):
-    # Test
-    # a = [0,1]
-    
-    #for i in range(50):
-    #    print(a)
-    #    a = next_perm(a)
     a = [x for x in range(d)]
     print(n, 'th permutation of', a)
     
