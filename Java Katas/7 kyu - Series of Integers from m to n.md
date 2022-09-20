@@ -22,3 +22,14 @@ public class Kata {
     }
 }
 ```
+
+## My Solution #2 - Using IntStream.
+```java
+import java.util.stream.IntStream;
+
+public class Kata {
+    public static int[] generateIntegers(final int m, final int n) {
+        return IntStream.rangeClosed(m, n).toArray();
+    }
+}
+```
