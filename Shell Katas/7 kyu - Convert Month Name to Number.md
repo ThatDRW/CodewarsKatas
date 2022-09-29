@@ -15,7 +15,6 @@ stdout:04
 
 stdin:FeB
 stdout:02
-
 ```
 
 ## My Solution #1 - 
