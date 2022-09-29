@@ -25,5 +25,5 @@ The first question: from the African countries that start with the character E, 
 
 ## My Solution #1 - 
 ```sql
-SELECT country FROM countries WHERE continent IN ('Africa','Afrika') AND country LIKE 'E%' ORDER BY country ASC LIMIT 3;
+SELECT capital FROM countries WHERE continent IN ('Africa','Afrika') AND country LIKE 'E%' ORDER BY capital ASC LIMIT 3;
 ```
