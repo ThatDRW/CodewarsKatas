@@ -17,11 +17,11 @@ The first question: from the African countries that start with the character E, 
     Also, this database is crowd-sourced, so sometimes Africa is written Africa and in other times Afrika.
 
 ## Examples
-| country  |
-|----------|
-| Egypt    |
-| Eritrea  |
-| Eswatini |
+| capital     |
+|-------------|
+| Addis Ababa |
+| Asmara      |
+| Cairo       |
 
 ## My Solution #1 - 
 ```sql
